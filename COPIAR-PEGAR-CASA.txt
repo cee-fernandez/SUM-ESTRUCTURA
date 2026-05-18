@@ -1,0 +1,19 @@
+=== EN CASA — copiar todo en PowerShell (NO hace falta administrador) ===
+
+cd $env:USERPROFILE\Documents
+git clone https://github.com/cee-fernandez/SUM-ESTRUCTURA.git
+cd SUM-ESTRUCTURA
+.\scripts\setup\install-mcp-stack.ps1
+
+Luego abrir esta carpeta en Cursor Desktop:
+  C:\Users\TU_USUARIO\Documents\SUM-ESTRUCTURA
+
+Primer mensaje al agente:
+  "Hice git pull. Revisá exchange/autocad/in y guiame Tekla."
+
+Si tenes el DWG en Descargas, copialo a:
+  Documents\SUM-ESTRUCTURA\exchange\autocad\in\
+y ejecuta de nuevo:
+  .\scripts\end-of-day.ps1
+
+NO usar: C:\Windows\System32

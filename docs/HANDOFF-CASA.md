@@ -14,12 +14,26 @@
 
 ---
 
-## En la PC de trabajo AHORA (2 minutos)
+## IMPORTANTE — no uses System32
 
-En PowerShell, carpeta del proyecto:
+**NUNCA** clones en `C:\Windows\System32` (pide permiso de administrador y falla).
+
+Usá tu carpeta de usuario, por ejemplo:
 
 ```powershell
-cd C:\ruta\donde\clonaste\SUM-ESTRUCTURA
+cd $env:USERPROFILE\Documents
+```
+
+---
+
+## En la PC de trabajo AHORA (2 minutos)
+
+En PowerShell:
+
+```powershell
+cd $env:USERPROFILE\Documents
+git clone https://github.com/cee-fernandez/SUM-ESTRUCTURA.git
+cd SUM-ESTRUCTURA
 .\scripts\end-of-day.ps1
 ```
 
@@ -33,13 +47,15 @@ Si el DWG está en otra carpeta, copialo manualmente a `exchange\autocad\in\` y 
 
 ## En casa (orden exacto)
 
-### 1. Clonar o actualizar
+### 1. Clonar o actualizar (sin administrador)
 
 ```powershell
-cd C:\Proyectos
+cd $env:USERPROFILE\Documents
 git clone https://github.com/cee-fernandez/SUM-ESTRUCTURA.git
+cd SUM-ESTRUCTURA
 # si ya clonaste antes:
-# cd SUM-ESTRUCTURA && git pull
+# cd $env:USERPROFILE\Documents\SUM-ESTRUCTURA
+# git pull
 ```
 
 ### 2. Instalar MCP (una vez por PC)
