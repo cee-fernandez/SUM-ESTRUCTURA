@@ -1,0 +1,27 @@
+# Tipologías de conexión — ampliar por proyecto
+
+types:
+  - code: VB_COL_BOLT
+    description: "Viga a columna articulada (pernos)"
+    idea_template: ""
+    tekla_component: ""
+
+  - code: VB_COL_MOM
+    description: "Viga a columna con momento (rigidizadores)"
+    idea_template: ""
+    tekla_component: ""
+
+  - code: VB_VB
+    description: "Viga a viga"
+    idea_template: ""
+    tekla_component: ""
+
+  - code: BASE_COL
+    description: "Base de columna"
+    idea_template: ""
+    tekla_component: ""
+
+  - code: BRACE
+    description: "Arriostre"
+    idea_template: ""
+    tekla_component: ""

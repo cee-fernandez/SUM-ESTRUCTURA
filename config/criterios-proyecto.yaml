@@ -1,0 +1,40 @@
+# Criterios de diseño — COMPLETAR antes de modelar
+
+proyecto:
+  nombre: "SUM-ESTRUCTURA"
+  ubicacion: ""
+  cliente: ""
+
+normativa:
+  pais: ""           # ej. Argentina
+  codigo_estructural: ""  # ej. CIRSOC 301/302
+  codigo_acero: ""        # ej. IRAM IAS U500-42
+  codigo_conexiones: ""   # ej. AISC / Eurocode 3 según IDEA
+
+unidades:
+  longitud: "m"      # m | mm
+  fuerza: "kN"
+  momento: "kNm"
+
+materiales:
+  acero_predeterminado: "S355"
+  perfiles_columna: []   # ej. ["IPE400", "W14x90"]
+  perfiles_viga: []
+  perfiles_arriostre: []
+
+conexiones:
+  criterio_general: ""   # articulada | rigida | segun analisis
+  diseno_en_idea: true
+  tipos: []                # referencia a config/idea/connection-types.yaml
+
+software:
+  tekla_version: ""
+  autocad_version: ""
+  idea_version: ""
+
+entregables:
+  idioma_planos: "es"
+  incluir_nc_dxf: false
+
+tolerancias_qa:
+  bom_masa_porcentaje: 2.0   # % desvío aceptable vs estimación

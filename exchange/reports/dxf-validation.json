@@ -1,0 +1,45 @@
+{
+  "file": "exchange/autocad/out/SUM_layout_test.dxf",
+  "status": "ok",
+  "units_insunits": "meters",
+  "expected_layers": [
+    "SUM_ARQ",
+    "SUM_COL",
+    "SUM_EJES",
+    "SUM_NIVEL",
+    "SUM_SEC",
+    "SUM_TEXTO",
+    "SUM_VIG"
+  ],
+  "found_layers": [
+    "SUM_COL",
+    "SUM_EJES"
+  ],
+  "entity_counts_by_layer": {
+    "SUM_COL": 1,
+    "SUM_EJES": 2
+  },
+  "missing_expected_layers": [
+    "SUM_ARQ",
+    "SUM_NIVEL",
+    "SUM_SEC",
+    "SUM_TEXTO",
+    "SUM_VIG"
+  ],
+  "bbox": {
+    "min": [
+      1e+20,
+      1e+20,
+      1e+20
+    ],
+    "max": [
+      -1e+20,
+      -1e+20,
+      -1e+20
+    ]
+  },
+  "errors": [],
+  "warnings": [
+    "Capas SUM esperadas no encontradas: ['SUM_ARQ', 'SUM_NIVEL', 'SUM_SEC', 'SUM_TEXTO', 'SUM_VIG']"
+  ]
+}

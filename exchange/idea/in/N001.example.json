@@ -1,0 +1,22 @@
+{
+  "node_id": "N001",
+  "connection_type": "VB_COL_BOLT",
+  "norm": "definir en criterios-proyecto.yaml",
+  "members": {
+    "beam": { "profile": "IPE400", "material": "S355" },
+    "column": { "profile": "IPE400", "material": "S355" }
+  },
+  "loads": {
+    "combination": "ULS-01",
+    "N_kN": 0,
+    "Vy_kN": 0,
+    "Vz_kN": 0,
+    "My_kNm": 0,
+    "Mz_kNm": 0
+  },
+  "proposal": {
+    "plate_thickness_mm": 12,
+    "bolts": "M20 8.8",
+    "notes": "Completar tras análisis preliminar"
+  }
+}

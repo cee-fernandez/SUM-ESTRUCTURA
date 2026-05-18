@@ -1,0 +1,3 @@
+node_id,connection_type,beam_profile,column_profile,material,combination,notes
+N001,VB_COL_BOLT,IPE400,IPE400,S355,ULS-01,extremo viga A1-C1
+N002,VB_COL_MOM,W360x64,W360x64,S355,ULS-01,momento max

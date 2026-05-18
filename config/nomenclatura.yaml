@@ -1,0 +1,29 @@
+# Nomenclatura SUM-ESTRUCTURA — editar según oficina
+
+prefijos_pieza:
+  columna: "C"
+  viga: "V"
+  arriostre: "AR"
+  correa: "CR"
+  placa: "PL"
+  tornilleria: "T"
+
+prefijos_ensamble:
+  marco: "MF"
+  conexion: "CN"
+
+formato_pieza: "{prefijo}{numero:03d}"   # ej. V012, C003
+formato_nodo_idea: "N{numero:03d}"       # ej. N014 → UDA SUM_NODO_IDEA
+
+capas_autocad:
+  - SUM_EJES
+  - SUM_NIVEL
+  - SUM_COL
+  - SUM_VIG
+  - SUM_ARQ
+  - SUM_SEC
+  - SUM_TEXTO
+
+revision:
+  inicio: 1
+  incremento: 1
