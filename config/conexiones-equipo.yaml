@@ -1,0 +1,26 @@
+# Completar cuando el equipo defina criterio de conexiones
+
+criterio_general: ""  # ej. articulada en vigas, rigida en porticos
+
+por_tipo:
+  viga_columna:
+    default: ""       # VB_COL_BOLT | VB_COL_MOM
+    notas: ""
+  viga_viga:
+    default: ""
+  base_columna:
+    default: BASE_COL
+  arriostre:
+    default: BRACE
+
+idea:
+  todas_en_idea: false
+  solo_no_catalogadas: true
+
+soldadura:
+  tipo_predeterminado: ""
+  control: ""
+
+tornilleria:
+  clase: "8.8"
+  diametros: ["M16", "M20", "M24"]

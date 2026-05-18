@@ -6,6 +6,10 @@ Este repositorio es el **centro de coordinación**: plan de trabajo, estándares
 
 ## Inicio rápido
 
+**¿Seguís en otra PC?** → [docs/HANDOFF-CASA.md](docs/HANDOFF-CASA.md)  
+**Estado actual:** [ESTADO-PROYECTO.md](ESTADO-PROYECTO.md)  
+**Antes de irte:** `.\scripts\end-of-day.ps1`
+
 1. Leer el plan maestro: [docs/00-PLAN-MAESTRO.md](docs/00-PLAN-MAESTRO.md)
 2. Completar el checklist de requisitos: [docs/06-REQUISITOS-Y-CHECKLIST.md](docs/06-REQUISITOS-Y-CHECKLIST.md)
 3. Colocar el layout de referencia en `exchange/autocad/in/`
