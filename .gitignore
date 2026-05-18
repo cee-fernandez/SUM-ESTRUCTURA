@@ -4,3 +4,6 @@ __pycache__/
 venv/
 *.db1
 *.bak
+vendor/
+node_modules/
+.mcp-cache/

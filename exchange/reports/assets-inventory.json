@@ -1,0 +1,12 @@
+{
+  "autocad_in": [],
+  "normativa": [],
+  "also_scan_repo_exchange": [
+    {
+      "path": "exchange/autocad/out/SUM_layout_test.dxf",
+      "size_bytes": 15619,
+      "suffix": ".dxf"
+    }
+  ],
+  "moved_this_run": []
+}

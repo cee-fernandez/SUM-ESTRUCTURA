@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "sum-exchange": {
+      "command": "python3",
+      "args": ["mcp/sum-exchange/server.py"],
+      "cwd": "${workspaceFolder}"
+    },
+    "sum-idea-statika": {
+      "command": "python3",
+      "args": ["mcp/idea-statika/server.py"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "IDEA_REST_PORT": "5193"
+      }
+    }
+  }
+}

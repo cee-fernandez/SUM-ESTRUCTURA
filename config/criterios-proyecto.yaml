@@ -1,40 +1,46 @@
-# Criterios de diseño — COMPLETAR antes de modelar
+# Criterios de diseño — SUM-ESTRUCTURA
 
 proyecto:
   nombre: "SUM-ESTRUCTURA"
-  ubicacion: ""
+  ubicacion: "Argentina"
   cliente: ""
 
 normativa:
-  pais: ""           # ej. Argentina
-  codigo_estructural: ""  # ej. CIRSOC 301/302
-  codigo_acero: ""        # ej. IRAM IAS U500-42
-  codigo_conexiones: ""   # ej. AISC / Eurocode 3 según IDEA
+  pais: "Argentina"
+  codigo_estructural: "CIRSOC 301/302/303/304/305"
+  codigo_acero: "CIRSOC 302 / IRAM IAS U500"
+  codigo_conexiones: "CIRSOC 302 + verificación IDEA CBFEM"
+  notas: "Completar con documento en exchange/normativa/ si difiere"
 
 unidades:
-  longitud: "m"      # m | mm
+  longitud: "m"
   fuerza: "kN"
   momento: "kNm"
 
 materiales:
   acero_predeterminado: "S355"
-  perfiles_columna: []   # ej. ["IPE400", "W14x90"]
+  perfiles_columna: []
   perfiles_viga: []
   perfiles_arriostre: []
 
 conexiones:
-  criterio_general: ""   # articulada | rigida | segun analisis
+  criterio_general: "definir con el equipo de proyecto"
   diseno_en_idea: true
-  tipos: []                # referencia a config/idea/connection-types.yaml
+  tipos: []
 
 software:
-  tekla_version: ""
-  autocad_version: ""
-  idea_version: ""
+  autocad_version: "2026"
+  tekla_version: "2026"
+  idea_version: "2026"
+  mcp:
+    autocad: "vendor/autocad-mcp (moisesbritez92)"
+    tekla: "vendor/svMCP (40ushek) — validar en TS 2026"
+    idea: "sum-idea-statika + ConnectionRestApi :5193"
+    exchange: "sum-exchange (repo)"
 
 entregables:
   idioma_planos: "es"
   incluir_nc_dxf: false
 
 tolerancias_qa:
-  bom_masa_porcentaje: 2.0   # % desvío aceptable vs estimación
+  bom_masa_porcentaje: 2.0

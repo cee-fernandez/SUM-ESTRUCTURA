@@ -34,8 +34,17 @@ Tekla (modelo 3D + GA + fab + montaje) ◄── macros / Open API (local)
 IDEA StatiCa (conexiones a medida) ◄── export nodos/perfiles + diseño CBFEM
 ```
 
-## Licencias necesarias (en tu PC)
+## MCP — control de AutoCAD, Tekla e IDEA desde Cursor
 
-- Tekla Structures (acero) + opcional Tekla Partners para desarrollo Open API
-- AutoCAD o AutoCAD LT (según necesidad de DWG nativo)
-- IDEA StatiCa Steel + módulo Connection
+Configuración lista en el repo:
+
+- `.cursor/mcp.json` — servidores base (`sum-exchange`, `sum-idea-statika`)
+- `mcp/mcp.windows.full.json` — stack completo 2026 (AutoCAD + Tekla + IDEA)
+- Guía: [docs/07-CONFIGURACION-MCP.md](docs/07-CONFIGURACION-MCP.md)
+- Instalador Windows: `scripts/setup/install-mcp-stack.ps1`
+
+## Licencias (2026 en tu PC)
+
+- AutoCAD 2026
+- Tekla Structures 2026 (acero)
+- IDEA StatiCa 2026 Steel + Connection

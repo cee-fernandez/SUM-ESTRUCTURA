@@ -22,12 +22,13 @@
 - [ ] Git + clone de este repositorio
 - [ ] (Opcional) Git LFS para modelos Tekla
 
-## Checklist configuración agente Cursor
+## Checklist MCP (preparado en el repo)
 
-- [ ] Reglas del proyecto cargadas (`.cursor/rules/sum-estructura.mdc`)
-- [ ] Carpeta `exchange/` con permisos de escritura desde CAD/BIM
-- [ ] Push a Git tras cada export importante
-- [ ] (Futuro) Runner Windows para Tekla/IDEA API documentado en `scripts/local/`
+- [ ] `scripts/setup/install-mcp-stack.ps1` en Windows
+- [ ] MCP en Cursor Desktop (`docs/07-CONFIGURACION-MCP.md`)
+- [ ] AutoCAD 2026 + plugin; Tekla 2026; IDEA RestApi puerto 5193
+- [ ] DWG/DXF en `exchange/autocad/in/` (push a GitHub)
+- [ ] Normativa en `exchange/normativa/`
 
 ## Checklist primera iteración (cuando subas el DXF)
 

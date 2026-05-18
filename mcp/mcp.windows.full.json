@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "sum-exchange": {
+      "command": "python",
+      "args": ["mcp/sum-exchange/server.py"],
+      "cwd": "${workspaceFolder}"
+    },
+    "sum-idea-statika": {
+      "command": "python",
+      "args": ["mcp/idea-statika/server.py"],
+      "cwd": "${workspaceFolder}",
+      "env": { "IDEA_REST_PORT": "5193" }
+    },
+    "autocad-2026": {
+      "command": "node",
+      "args": ["vendor/autocad-mcp/dist/index.js"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "AUTOCAD_CONSOLE_PATH": "C:\\Program Files\\Autodesk\\AutoCAD 2026\\accoreconsole.exe",
+        "AUTOCAD_PLUGIN_URL": "http://localhost:12345",
+        "MCP_AUTOCAD_TOKEN": "default-secret-token"
+      }
+    },
+    "tekla-svmcp": {
+      "command": "dotnet",
+      "args": ["run", "--project", "vendor/svMCP/src/TeklaMcpServer/TeklaMcpServer.csproj"],
+      "cwd": "${workspaceFolder}",
+      "env": { "TEKLA_VERSION": "2026" }
+    },
+    "tekla-openapi-docs": {
+      "command": "npx",
+      "args": ["-y", "tekla-api-mcp@latest"]
+    }
+  }
+}

@@ -1,44 +1,41 @@
 ---
-description: Reglas para diseño SUM-ESTRUCTURA (AutoCAD, Tekla, IDEA StatiCa)
+description: Reglas SUM-ESTRUCTURA con MCP (AutoCAD/Tekla/IDEA 2026)
 globs:
   - "**/*"
 alwaysApply: true
 ---
 
-# SUM-ESTRUCTURA — Agente estructural
+# SUM-ESTRUCTURA — Agente estructural (MCP)
 
-## Contexto
+## Prioridad de herramientas
 
-Proyecto de acero: layout en AutoCAD, modelo y planos en Tekla, conexiones custom en IDEA StatiCa. El repo es la fuente de verdad para criterios e intercambios (`exchange/`).
+1. **MCP `sum-exchange`**: listar archivos, `validate_dxf`, leer `config/criterios-proyecto.yaml`
+2. **MCP `autocad-2026`**: leer/modificar DWG en vivo (Cursor Desktop + AutoCAD abierto)
+3. **MCP `tekla-svmcp`**: modelar en Tekla 2026
+4. **MCP `sum-idea-statika`**: conexiones IDEA (REST :5193)
+5. Fallback sin MCP: scripts en `scripts/` y archivos en `exchange/`
 
-## Limitaciones
+## Versiones
 
-- No asumir que AutoCAD, Tekla o IDEA están instalados en el entorno cloud.
-- Trabajar sobre archivos en `exchange/`, YAML en `config/`, y scripts en `scripts/`.
-- Para cambios en modelo Tekla vivo: generar macro/Open API o instrucciones paso a paso para ejecución local.
+AutoCAD, Tekla e IDEA **2026**. Ver `config/criterios-proyecto.yaml`.
 
-## Orden de trabajo
+## Normativa
 
-1. Verificar `config/criterios-proyecto.yaml` completo; si falta datos, pedirlos explícitamente.
-2. Validar DXF en `exchange/autocad/` antes de guiar modelado Tekla.
-3. Mantener trazabilidad nodo IDEA ↔ UDA `SUM_NODO_IDEA` en Tekla.
-4. No emitir instrucciones de planos finales sin Gate 3 (conexiones) cumplido.
+CIRSOC Argentina por defecto. PDF/MD en `exchange/normativa/`. No pedir al usuario configurar MCP: usar `docs/07-CONFIGURACION-MCP.md` y `scripts/setup/install-mcp-stack.ps1`.
+
+## Flujo
+
+1. `list_exchange_files` → `autocad/in` y `normativa`
+2. Validar DXF antes de Tekla
+3. Conexiones: criterio del equipo + IDEA; trazabilidad `SUM_NODO_IDEA`
+4. Gates en `docs/05-FLUJO-ENTREGABLES.md`
+
+## Cloud Agent
+
+Si MCP CAD no está disponible: trabajar vía Git + `sum-exchange` hasta que el usuario use Cursor Desktop con MCP local.
 
 ## Estándares
 
-- Nomenclatura: `config/nomenclatura.yaml`
-- Nombres de archivo: `SUM_{disciplina}_{tipo}_{desc}_v{NN}.ext`
-- Documentación en español salvo que el usuario pida otro idioma.
-
-## Herramientas
-
-- DXF: `python scripts/dxf/validate_layout.py <ruta.dxf>`
-- IDEA: scripts en `scripts/idea/` contra REST local (puerto 5193)
-- Tekla: plugins C# en `scripts/tekla/` — solo documentar ejecución local
-
-## Entregables que debe producir el agente cuando corresponda
-
-- Reportes JSON/MD en `exchange/reports/`
-- CSV de nodos para IDEA
-- Actualización de checklists en `docs/`
-- Sin refactors ajenos al alcance estructural
+- `config/nomenclatura.yaml`
+- Nombres: `SUM_{disciplina}_{tipo}_{desc}_v{NN}.ext`
+- Español en documentación
